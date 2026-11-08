@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- R-P0-1：插件进程独立，避免同进程 Hilt 图构造第二个 SimpleCache 损坏索引 -->
+    <application>
+        <service
+            android:name=".PluginRuntimeService"
+            android:exported="false"
+            android:process=":plugin" />
+    </application>
+</manifest>
